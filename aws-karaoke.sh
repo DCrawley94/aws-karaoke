@@ -20,10 +20,10 @@ done
 echo -e "You have chosen $SONG_CHOICE performed by by $SINGER_CHOICE\n"
 
 if [ -d "mp3s" ]; then
-    aws polly synthesize-speech --output-format mp3 --text "file://songs/$SONG_CHOICE" --voice-id "$SINGER_CHOICE" "mp3s/$SINGER_CHOICE-$SONG_CHOICE.mp3" >/dev/null 2>&1
+    aws polly synthesize-speech --output-format mp3 --text "file://songs/$SONG_CHOICE" --voice-id "$SINGER_CHOICE" "mp3s/$SINGER_CHOICE-$SONG_CHOICE.mp3"
 else
     mkdir mp3s
-    aws polly synthesize-speech --output-format mp3 --text "file://songs/$SONG_CHOICE" --voice-id "$SINGER_CHOICE" "mp3s/$SINGER_CHOICE-$SONG_CHOICE.mp3" >/dev/null 2>&1
+    aws polly synthesize-speech --output-format mp3 --text "file://songs/$SONG_CHOICE" --voice-id "$SINGER_CHOICE" "mp3s/$SINGER_CHOICE-$SONG_CHOICE.mp3"
 fi
 
 sleep 1
